@@ -71,28 +71,29 @@ The dashboard compares the selected stock against relevant market peers using:
 ```text
 stock-analysis-dashboard/
 │
-├── app.py
-├── config.py
-├── requirements.txt
-├── run.sh
-├── structure.sh
-├── .env
+├── app.py                          # Main Flask application entry point
+├── requirements.txt                # Python dependencies
+├── .env                            # Environment variables (API keys)
 │
 ├── modules/
-│   ├── ai_analyzer.py
-│   ├── data_cleaner.py
-│   ├── data_collector.py
-│   └── visualizer.py
+│   ├── __init__.py
+│   ├── data_collector.py          # Module 1: Data collection (yfinance)
+│   ├── data_cleaner.py            # Module 2: Data cleaning & processing
+│   ├── visualizer.py              # Module 3: Chart generation
+│   └── ai_analyzer.py             # Module 4: AI analysis (Google AI Studio)
 │
 ├── templates/
-│   └── dashboard.html
+│   └── dashboard.html              # HTML frontend template
 │
 ├── static/
 │   ├── css/
-│   ├── js/
-│   └── assets/
+│   │   └── style.css               # CSS styles
+│   └── js/
+│       └── dashboard.js            # Frontend JavaScript
 │
-└── README.md
+├── output_charts/                  # Generated chart images
+│
+└── config.py                       # Configuration settings
 ```
 
 ---
